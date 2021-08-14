@@ -3,3 +3,36 @@
     padding: 0px;
     box-sizing: border-box;
 }
+html,body{
+    height: 100%;
+}
+html{
+    font-size: 62.5%;
+}
+section.main-page{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr min-content;
+}
+.left{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background:url(../images/twitterbg.png) no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.p-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.left svg.left-content-icon{
+    fill: #fff;
+    width: 90%;
+    max-height: 380px;
+    height: 60%;
+}
