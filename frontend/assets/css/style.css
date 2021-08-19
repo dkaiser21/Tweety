@@ -3,6 +3,9 @@
     padding: 0px;
     box-sizing: border-box;
 }
+a{
+    text-decoration: none;
+}
 html,body{
     height: 100%;
 }
@@ -35,4 +38,77 @@ section.main-page{
     width: 90%;
     max-height: 380px;
     height: 60%;
+}
+.right{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    padding: 20px;
+    min-width: 45vw;
+}
+.right-content{
+display: flex;
+flex-direction: column;
+padding: 20px;
+min-width: 437px;
+max-width: 760px;
+height: 100%;
+width: 100%;
+}
+.right-site-wrapper{
+    padding-bottom: 12px;
+}
+.right-site-wrapper svg{
+    fill: rgb(29,161,242);
+}
+.right-middle-content{
+    flex: 1;
+}
+h2.middle-heading{
+    font-size: 75px;
+    font-weight: 900px;
+    margin-top: 48px;
+    line-height: 50px;
+    overflow-wrap: break-word;
+    letter-spacing: 3.8px;
+    margin-bottom: 48px;
+    color: rgb(15,20,25);
+}
+.right .right-middle-content h5{
+    font-size: 30px;
+    margin-bottom: 32px;
+    font-weight: 700;
+    line-height: 1.3125;
+    overflow-wrap: break-word;
+    color: rgb(15, 20, 25);
+}
+.right-middle-content a.btn-link{
+    display: block;
+    min-width: calc(77.28px);
+    min-height: 48px;
+    max-width: 380px;
+    margin-bottom: 20px;
+    font-size: 21px;
+    text-align: center;
+    padding-top: 13px;
+    padding-left: 32px;
+    padding-right: 32px;
+    border-radius: 9999px;
+}
+.right-middle-content .sign-up-btn{
+    background-color: rgb(29, 161, 242);
+    color: #fff;
+    border:0.1rem solid rgba(0, 0, 0, 0);
+    transition: background-color 0.3s;
+}
+.right-middle-content .sign-up-btn:hover{
+    background-color: rgb(29, 145, 218);
+}
+.right-middle-content .log-in-btn{
+    background-color:  #fff;
+    color: rgb(29, 161, 242);
+    border: 0.1rem solid rgb(29, 161, 242);
+    transition: background-color 0.3s;
+}
+.right-middle-content .log-in-btn:hover{
+    background-color: rgba(29, 161, 242,0);
 }
