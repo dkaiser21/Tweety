@@ -14,4 +14,4 @@
         <link rel="stylesheet" href="frontend/assets/css/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="frontend/assets/css/style.css">
     </head>
-    <body>
+<body>
