@@ -39,7 +39,7 @@ section.main-page{
     max-height: 380px;
     height: 60%;
 }
-.right{
+.right {
     grid-column: 2/3;
     grid-row: 1/2;
     padding: 20px;
