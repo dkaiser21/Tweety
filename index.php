@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width-device-width, initial-scale=1.0">
-        <title>Twitter.It´s what happening</title>
-        <link rel="stylesheet" href="frontend/assets/css/style.css">
-    </head>
-    <body>
+<?php require_once 'backend/shared/header.php'; ?>
         <section class="main-page">
         <div class="left">
             <div class="left-content p-center">
@@ -24,7 +15,7 @@
                     <h2 class="middle-heading">happening Now</h2>
                     <h5>Join Tweety today</h5>
                     <div class="s-in-wrapper">
-                        <a href="sign.php" class="btn-link sign-up-btn">Sign Up</a>
+                        <a href="signUp.php" class="btn-link sign-up-btn">Sign Up</a>
                         <a href="login.php" class="btn-link log-in-btn">Log In</a>
                         </div>
                     </div>
