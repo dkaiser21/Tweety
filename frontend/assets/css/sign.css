@@ -5,13 +5,7 @@ section.sign-container{
     width: 100%;
     grid-template-rows: repeat(2,min-content) 1fr;
 }
-section.sign-container{
-    display: grid;
-    grid-template-columns: minmax(5rem,1fr) 2fr minmax(5rem,1fr);
-    height: 100vh;
-    width: 100%;
-    grid-template-rows: repeat(2,min-content) 1fr;
-}
+
 .sign-container nav.nav-header-sign__up{
     grid-column: 1/4;
     grid-row: 1/2;

@@ -15,7 +15,7 @@
                     <h2 class="middle-heading">happening Now</h2>
                     <h5>Join Tweety today</h5>
                     <div class="s-in-wrapper">
-                        <a href="signUp.php" class="btn-link sign-up-btn">Sign Up</a>
+                        <a href="sign.php" class="btn-link sign-up-btn">Sign Up</a>
                         <a href="login.php" class="btn-link log-in-btn">Log In</a>
                         </div>
                     </div>

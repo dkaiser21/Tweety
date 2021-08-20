@@ -5,7 +5,7 @@
         <ul>
             <li>
                 <a href="index.php">
-                    <i class="fa fa-twitter"><i>
+                    <i class="fa fa-twitter"></i>
                         home
                 </a>
             </li>
@@ -22,7 +22,7 @@
             <div class="header-form-content">
                 <h2>create your account<h2>
             </div>
-            <form action="signUp.php" class="formField">
+            <form action="sign.php" class="formField">
                 <div class="form-group">
                     <label for="firstName">FirstName</label>
                     <input type="text" name="firstName" id="firstName" autocomplete="off">
@@ -49,12 +49,13 @@
                 </div>
                 <div class="form-btn-wrapper">
                     <button type="submit" class="btn-form">SignUp</button>
-                    <input type="checkbox" id="check" name="remember">
+                    <input type="checkbox" class="form-checkbox" id="check" name="remember">
                     <label for="check">Remember me</label>
                 </div>
         </div>
-    </div>
-    <footer class="form-footer">
+        <footer class="form-footer">
         <p>Already have an account. <a href="login.php">Login Now</a></p>
     </footer>
+    </div>
+    
 </section>  
