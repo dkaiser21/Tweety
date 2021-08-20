@@ -4,6 +4,7 @@ section.sign-container{
     height: 100vh;
     width: 100%;
     grid-template-rows: repeat(2,min-content) 1fr;
+    row-gap: 1.5rem;
 }
 
 .sign-container nav.nav-header-sign__up{
@@ -26,7 +27,7 @@ section.sign-container{
     margin-left: auto;
 }
 .nav-header-sign__up li a{
-    font-size: 2rem;
+    font-size: 1.6rem;
     color: #555;
 }
 .nav-header-sign__up i{
@@ -51,7 +52,7 @@ section.sign-container{
     grid-column: 2/3;
     grid-row: 2/3;
     background-color: #fff;
-    box-shadow: 0 0 0.5rem rgb(0, 0, 0 /30%);
+    box-shadow: 0 0 0.5rem rgb(0 0 0 /30%);
     width: 100rem;
     display: grid;
     grid-template-columns: 10rem 8fr;
