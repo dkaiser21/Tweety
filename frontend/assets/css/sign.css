@@ -1,0 +1,55 @@
+section.sign-container{
+    display: grid;
+    grid-template-columns: minmax(5rem,1fr) 2fr minmax(5rem,1fr);
+    height: 100vh;
+    width: 100%;
+    grid-template-rows: repeat(2,min-content) 1fr;
+}
+section.sign-container{
+    display: grid;
+    grid-template-columns: minmax(5rem,1fr) 2fr minmax(5rem,1fr);
+    height: 100vh;
+    width: 100%;
+    grid-template-rows: repeat(2,min-content) 1fr;
+}
+.sign-container nav.nav-header-sign__up{
+    grid-column: 1/4;
+    grid-row: 1/2;
+    padding: 2rem 0;
+    box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.3);
+}
+.sign-container .nav-header-sign__up ul{
+    display: flex;
+    width: 100rem;
+    align-items: flex-end;
+    margin: auto;
+}
+.nav-header-sign__up ul li{
+    padding: 0 2.5rem;
+    position: relative;
+}
+.nav-header-sign__up ul li:last-child{
+    margin-left: auto;
+}
+.nav-header-sign__up li a{
+    font-size: 2rem;
+    color: #555;
+}
+.nav-header-sign__up i{
+    font-size: 2rem;
+    color: #1aa1f5;
+}
+.nav-header-sign__up li:after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0.4rem;
+    background-color: #1aa1f5;
+    left: 0;
+    bottom: -2.5rem;
+    opacity: 0;
+    transition:opacity 0.3s;
+}
+.nav-header-sign__up li:hover::after{
+    opacity: 1;
+}
