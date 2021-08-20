@@ -47,3 +47,76 @@ section.sign-container{
 .nav-header-sign__up li:hover::after{
     opacity: 1;
 }
+.form-container{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-color: #fff;
+    box-shadow: 0 0 0.5rem rgb(0, 0, 0 /30%);
+    width: 100rem;
+    display: grid;
+    grid-template-columns: 10rem 8fr;
+    grid-template-rows: 2fr 100px;
+}
+.form-container .form-content{
+    grid-column: 2/-1;
+    grid-row: 1/2;
+    padding: 5rem 0 1rem 0;
+}
+.header-form-content h2{
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+}
+.formField{
+    display: flex;
+    flex-direction: column;
+}
+.form-group{
+    margin-bottom: 2rem;
+}
+.form-group label{
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+input:not(.form-checkbox){
+    width: 30rem;
+    display: block;
+    height: 3.5rem;
+    border: 0.1rem solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+}
+.s-password{
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+.form-btn-wrapper .btn-form{
+    padding: 1rem 1.5rem;
+    background-color: #1aa1f5;
+    color: #fff;
+    border: 0.1rem solid #1aa1f5;
+    border-radius: 4rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+.form-btn-wrapper lable{
+    font-size: 1.6rem;
+}
+.form-footer{
+    grid-column: 1/-1;
+    grid-row: 2/-1;
+    padding-left: 100px;
+    background-color: #edf3f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.form-footer p{
+    font-size: 1.6rem;
+}
+.form-footer a:hover{
+    text-decoration: underline;
+}
