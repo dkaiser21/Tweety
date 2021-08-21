@@ -21,7 +21,7 @@
                     <label for="s-password">Show Password</label>
                 </div>
                 <div class="form-btn-wrapper">
-                    <button type="submit" class="btn-form">SignUp</button>
+                    <button type="submit" class="btn-form">Log in</button>
                     <input type="checkbox" class="form-checkbox" id="check" name="remember">
                     <label for="check">Remember me</label>
                 </div>
