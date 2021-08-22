@@ -44,12 +44,12 @@
                     <input type="password" name="pass2" id="cpass" autocomplete="off">
                 </div>
                 <div class="spassword">
-                    <input type="checkbox" class="form-checkbox" id="s-password" >
+                    <input type="checkbox" class="form-checkbox" id="s-password" onclick="showPassword()">
                     <label for="s-password">Show Password</label>
                 </div>
                 <div class="form-btn-wrapper">
                     <button type="submit" class="btn-form">SignUp</button>
-                    <input type="checkbox" class="form-checkbox" id="check" name="remember">
+                    <input type="checkbox" class="form-checkbox" id="check" name="remember" >
                     <label for="check">Remember me</label>
                 </div>
         </div>
@@ -59,3 +59,4 @@
     </div>
     
 </section>  
+<script src="frontend/assets/js/showPassword.js"></script>

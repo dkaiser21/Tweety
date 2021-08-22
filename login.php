@@ -1,4 +1,4 @@
-<?php require_once 'backend/config.php'; ?>
+
 <?php $pageTitle="Login on Tweety | Tweety"; ?>
 <?php require_once 'backend/shared/header.php'; ?>
 <section class="sign-container">
@@ -18,12 +18,12 @@
                     <input type="password" name="pass" id="pass" autocomplete="off">
                 </div>
                 <div class="spassword">
-                    <input type="checkbox" class="form-checkbox" id="s-password" >
+                    <input type="checkbox" class="form-checkbox" id="s-password" onclick="showPassword()" >
                     <label for="s-password">Show Password</label>
                 </div>
                 <div class="form-btn-wrapper">
                     <button type="submit" class="btn-form">Log in</button>
-                    <input type="checkbox" class="form-checkbox" id="check" name="remember">
+                    <input type="checkbox" class="form-checkbox" id="check" name="remember" onclick="showLoginPassword()">
                     <label for="check">Remember me</label>
                 </div>
         </div>
@@ -33,3 +33,4 @@
     </div>
     
 </section>  
+<script src="frontend/assets/js/showPassword.js"></script>
