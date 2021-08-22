@@ -1,3 +1,4 @@
+<?php require_once 'backend/config.php'; ?>
 <?php $pageTitle="Login on Tweety | Tweety"; ?>
 <?php require_once 'backend/shared/header.php'; ?>
 <section class="sign-container">

@@ -1,3 +1,4 @@
+<?php require_once 'backend/initialize.php'; ?>
 <?php require_once 'backend/shared/header.php'; ?>
         <section class="main-page">
         <div class="left">
