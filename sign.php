@@ -1,3 +1,13 @@
+<?php
+require_once "backend/initialize.php";
+
+    if(is_post_request()){
+        if(isset($_POST['firstName']) && !empty($_POST['firstName'])){
+            $fname=$_POST['firstName'];
+            echo $fname;
+        }
+    }
+?>
 <?php $pageTitle="SignUp | Tweety"; ?>
 <?php require_once 'backend/shared/header.php'; ?>
 <section class="sign-container">
@@ -22,26 +32,26 @@
             <div class="header-form-content">
                 <h2>create your account<h2>
             </div>
-            <form action="sign.php" class="formField">
+            <form action="sign.php" class="formField" method="POST">
                 <div class="form-group">
                     <label for="firstName">FirstName</label>
-                    <input type="text" name="firstName" id="firstName" autocomplete="off">
+                    <input type="text" name="firstName" id="firstName" autocomplete="off" required>
                 </div>
                 <div class="form-group">
                     <label for="LastName">LastName</label>
-                    <input type="text" name="lastName" id="lastName" autocomplete="off"> 
+                    <input type="text" name="lastName" id="lastName" autocomplete="off" required> 
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="text" name="email" id="email" autocomplete="off">
+                    <input type="text" name="email" id="email" autocomplete="off" required>
                 </div>
                 <div class="form-group">
                     <label for="pass">Password</label>
-                    <input type="password" name="password" id="password" autocomplete="off">
+                    <input type="password" name="password" id="pass" autocomplete="off" required>
                 </div>
                 <div class="form-group">
                     <label for="cpass">Confirm Password</label>
-                    <input type="password" name="pass2" id="cpass" autocomplete="off">
+                    <input type="password" name="pass2" id="cpass" autocomplete="off" required>
                 </div>
                 <div class="spassword">
                     <input type="checkbox" class="form-checkbox" id="s-password" onclick="showPassword()">

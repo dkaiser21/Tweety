@@ -1,4 +1,3 @@
-
 <?php $pageTitle="Login on Tweety | Tweety"; ?>
 <?php require_once 'backend/shared/header.php'; ?>
 <section class="sign-container">
@@ -8,22 +7,22 @@
             <div class="header-form-content">
                 <h2>Login to Tweety<h2>
             </div>
-            <form action="sign.php" class="formField">
+            <form action="sign.php" class="formField" method="POST">
                 <div class="form-group">
                     <label for="un">Username or Email</label>
-                    <input type="text" name="un" id="un" autocomplete="off">
+                    <input type="text" name="un" id="un" autocomplete="off" required>
                 </div>
                 <div class="form-group">
                     <label for="pass">Password</label>
-                    <input type="password" name="pass" id="pass" autocomplete="off">
+                    <input type="password" name="pass" id="pass" autocomplete="off" required>
                 </div>
                 <div class="spassword">
-                    <input type="checkbox" class="form-checkbox" id="s-password" onclick="showPassword()" >
+                    <input type="checkbox" class="form-checkbox" id="s-password" onclick="showLoginPassword()" >
                     <label for="s-password">Show Password</label>
                 </div>
                 <div class="form-btn-wrapper">
                     <button type="submit" class="btn-form">Log in</button>
-                    <input type="checkbox" class="form-checkbox" id="check" name="remember" onclick="showLoginPassword()">
+                    <input type="checkbox" class="form-checkbox" id="check" name="remember" >
                     <label for="check">Remember me</label>
                 </div>
         </div>
