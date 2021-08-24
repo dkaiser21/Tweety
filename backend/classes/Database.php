@@ -11,6 +11,7 @@
                 echo "Connection failed: ".$e->getMessage();
             }
         }
+
         public static function instance(){
             if(self::$instance===null){
                 self::$instance=new self;
@@ -19,7 +20,7 @@
         }
 
         public function __call($method,$args){
-            return call_user_func_array(array($this->pdo,$method),$args)
+            return call_user_func_array(array($this->pdo,$method),$args);
         } 
     }
 ?>

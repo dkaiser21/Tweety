@@ -1,10 +1,18 @@
 <?php
 require_once "backend/initialize.php";
 
+
     if(is_post_request()){
         if(isset($_POST['firstName']) && !empty($_POST['firstName'])){
-            $fname=$_POST['firstName'];
-            echo $fname;
+            $fname=FormSanitizer::formSanitizerString($_POST['firstName']);
+            $lname=FormSanitizer::formSanitizerString($_POST['lastName']);
+            $email=FormSanitizer::formSanitizerString($_POST['email']);
+            $password=FormSanitizer::formSanitizerString($_POST['pass']);
+            $password2=FormSanitizer::formSanitizerString($_POST['pass2']);
+            
+            $username="TODO";
+
+            $account->register($fname,$lname,$email,$password,$password2);
         }
     }
 ?>
