@@ -4,15 +4,16 @@ require_once "backend/initialize.php";
 
     if(is_post_request()){
         if(isset($_POST['firstName']) && !empty($_POST['firstName'])){
-            $fname=FormSanitizer::formSanitizerString($_POST['firstName']);
-            $lname=FormSanitizer::formSanitizerString($_POST['lastName']);
+            $fname=FormSanitizer::formSanitizerName($_POST['firstName']);
+            $lname=FormSanitizer::formSanitizerName($_POST['lastName']);
             $email=FormSanitizer::formSanitizerString($_POST['email']);
             $password=FormSanitizer::formSanitizerString($_POST['pass']);
             $password2=FormSanitizer::formSanitizerString($_POST['pass2']);
             
-            $username="TODO";
+            $username=$account->generateUsername($fname,$lname);
+            echo $username;
 
-            $account->register($fname,$lname,$email,$password,$password2);
+            $account->register($fname,$lname,$username,$email,$password,$password2);
         }
     }
 ?>
@@ -42,10 +43,12 @@ require_once "backend/initialize.php";
             </div>
             <form action="sign.php" class="formField" method="POST">
                 <div class="form-group">
+                    <?php echo $account->getErrorMessage($firstNameCharacters);  ?>
                     <label for="firstName">FirstName</label>
                     <input type="text" name="firstName" id="firstName" autocomplete="off" required>
                 </div>
                 <div class="form-group">
+                <?php echo $account->getErrorMessage($lastNameCharacters);  ?>
                     <label for="LastName">LastName</label>
                     <input type="text" name="lastName" id="lastName" autocomplete="off" required> 
                 </div>
