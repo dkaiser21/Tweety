@@ -43,12 +43,12 @@ require_once "backend/initialize.php";
             </div>
             <form action="sign.php" class="formField" method="POST">
                 <div class="form-group">
-                    <?php echo $account->getErrorMessage($firstNameCharacters);  ?>
+                    <?php echo $account->getErrorMessage(Constant::$firstNameCharacters);  ?>
                     <label for="firstName">FirstName</label>
                     <input type="text" name="firstName" id="firstName" autocomplete="off" required>
                 </div>
                 <div class="form-group">
-                <?php echo $account->getErrorMessage($lastNameCharacters);  ?>
+                <?php echo $account->getErrorMessage(Constant::$lastNameCharacters);  ?>
                     <label for="LastName">LastName</label>
                     <input type="text" name="lastName" id="lastName" autocomplete="off" required> 
                 </div>
@@ -58,7 +58,7 @@ require_once "backend/initialize.php";
                 </div>
                 <div class="form-group">
                     <label for="pass">Password</label>
-                    <input type="password" name="password" id="pass" autocomplete="off" required>
+                    <input type="password" name="pass" id="pass" autocomplete="off" required>
                 </div>
                 <div class="form-group">
                     <label for="cpass">Confirm Password</label>
