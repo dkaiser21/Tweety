@@ -11,9 +11,11 @@ require_once "backend/initialize.php";
             $password2=FormSanitizer::formSanitizerString($_POST['pass2']);
             
             $username=$account->generateUsername($fname,$lname);
-            echo $username;
 
-            $account->register($fname,$lname,$username,$email,$password,$password2);
+            $wasSuccessful=$account->register($fname,$lname,$username,$email,$password,$password2);
+            if($wasSuccessful){
+                $wasSuccessful;
+            }
         }
     }
 ?>
@@ -45,18 +47,23 @@ require_once "backend/initialize.php";
                 <div class="form-group">
                     <?php echo $account->getErrorMessage(Constant::$firstNameCharacters);  ?>
                     <label for="firstName">FirstName</label>
-                    <input type="text" name="firstName" id="firstName" autocomplete="off" required>
+                    <input type="text" name="firstName" id="firstName"  value="<?php getInputValue("firstName") ?>" autocomplete="off" required>
                 </div>
                 <div class="form-group">
                 <?php echo $account->getErrorMessage(Constant::$lastNameCharacters);  ?>
                     <label for="LastName">LastName</label>
-                    <input type="text" name="lastName" id="lastName" autocomplete="off" required> 
+                    <input type="text" name="lastName" id="lastName" value="<?php getInputValue("lastName") ?>" autocomplete="off" required> 
                 </div>
                 <div class="form-group">
+                <?php echo $account->getErrorMessage(Constant::$emailInUse);  ?>
+                <?php echo $account->getErrorMessage(Constant::$emailInValid);  ?>
                     <label for="email">Email</label>
-                    <input type="text" name="email" id="email" autocomplete="off" required>
+                    <input type="text" name="email" id="email" value="<?php getInputValue("email") ?>" autocomplete="off" required>
                 </div>
                 <div class="form-group">
+                <?php echo $account->getErrorMessage(Constant::$passwordDoNotMatch);  ?>
+                <?php echo $account->getErrorMessage(Constant::$passwordNotAlphanumeric);  ?>
+                <?php echo $account->getErrorMessage(Constant::$passwordLength);  ?>
                     <label for="pass">Password</label>
                     <input type="password" name="pass" id="pass" autocomplete="off" required>
                 </div>
