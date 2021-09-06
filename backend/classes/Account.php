@@ -100,7 +100,7 @@
         }
 
         private function length($input,$min,$max){
-            if(strlen($input) > $min){
+            if(strlen($input) < $min){
                 return true;
             }else if(strlen($input) > $max){
                 return true;
