@@ -139,3 +139,8 @@ footer.main-page-footer{
     color: rgb(91, 112, 131);
     line-height: calc(19.6875px);
 }
+
+.span.errorMessage {
+    font-size: 11px;
+    color: red;
+}

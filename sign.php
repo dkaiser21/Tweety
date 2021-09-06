@@ -45,25 +45,29 @@ require_once "backend/initialize.php";
             </div>
             <form action="sign.php" class="formField" method="POST">
                 <div class="form-group">
-                    <?php echo $account->getErrorMessage(Constant::$firstNameCharacters);  ?>
+                <?php echo $account->getErrorMessage(Constant::$firstNameCharacters);  ?> 
+</br>
                     <label for="firstName">FirstName</label>
                     <input type="text" name="firstName" id="firstName"  value="<?php getInputValue("firstName") ?>" autocomplete="off" required>
                 </div>
                 <div class="form-group">
-                <?php echo $account->getErrorMessage(Constant::$lastNameCharacters);  ?>
+                <?php echo $account->getErrorMessage(Constant::$lastNameCharacters);  ?> 
+                </br>
                     <label for="LastName">LastName</label>
                     <input type="text" name="lastName" id="lastName" value="<?php getInputValue("lastName") ?>" autocomplete="off" required> 
                 </div>
                 <div class="form-group">
                 <?php echo $account->getErrorMessage(Constant::$emailInUse);  ?>
                 <?php echo $account->getErrorMessage(Constant::$emailInValid);  ?>
+                </br>
                     <label for="email">Email</label>
                     <input type="text" name="email" id="email" value="<?php getInputValue("email") ?>" autocomplete="off" required>
                 </div>
                 <div class="form-group">
                 <?php echo $account->getErrorMessage(Constant::$passwordDoNotMatch);  ?>
                 <?php echo $account->getErrorMessage(Constant::$passwordNotAlphanumeric);  ?>
-                <?php echo $account->getErrorMessage(Constant::$passwordLength);  ?>
+                <?php echo $account->getErrorMessage(Constant::$passwordLength);  ?> 
+                </br>
                     <label for="pass">Password</label>
                     <input type="password" name="pass" id="pass" autocomplete="off" required>
                 </div>

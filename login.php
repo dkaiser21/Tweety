@@ -7,7 +7,7 @@
             <div class="header-form-content">
                 <h2>Login to Tweety<h2>
             </div>
-            <form action="sign.php" class="formField" method="POST">
+            <form action="login.php" class="formField" method="POST">
                 <div class="form-group">
                     <label for="un">Username or Email</label>
                     <input type="text" name="un" id="un" autocomplete="off" required>

@@ -121,3 +121,8 @@ input:not(.form-checkbox){
 .form-footer a:hover{
     text-decoration: underline;
 }
+
+span.errorMessage {
+    font-size: 16px;
+    color: red;
+}
