@@ -33,6 +33,18 @@
                 $profilePic="frontend/assets/images/profilePic.png";
                 $profileCover="frontend/assets/images/backgroundCoverPic.svg";
             }
+            $stmt=$this->pdo->prepare("INSERT INTO users (firstName,lastName,username,email,password,profileImage,profileCover) VALUES (:fn,:ln,:un,:em,:pw,:pic,:cov)");
+            $stmt->bindParam(":fn",$fn,PDO::PARAM_STR);
+            $stmt->bindParam(":ln",$ln,PDO::PARAM_STR);
+            $stmt->bindParam(":un",$un,PDO::PARAM_STR);
+            $stmt->bindParam(":em",$em,PDO::PARAM_STR);
+            $stmt->bindParam(":pw",$pass_hash,PDO::PARAM_STR);
+            $stmt->bindParam(":pic",$profilePic,PDO::PARAM_STR);
+            $stmt->bindParam(":cov",$profileCover,PDO::PARAM_STR);
+
+            $stmt->execute();
+
+            return $this->pdo->lastInsertId();
         }
 
         private function validateFirstName($fn){
