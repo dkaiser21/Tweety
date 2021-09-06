@@ -22,7 +22,17 @@
 
         public function insertUserDetails($fn,$ln,$un,$em,$pw){
             $pass_hash=password_hash($pw,PASSWORD_BCRYPT);
-            echo $pass_hash;
+            $rand=rand(0,2);
+            if($rand==0){
+                $profilePic="frontend/assets/images/defaultProfilePic.png";
+                $profileCover="frontend/assets/images/backgroundCoverPic.svg";
+            }else if($rand==1){
+                $profilePic="frontend/assets/images/defaultPic.png";
+                $profileCover="frontend/assets/images/backgroundCoverPic.svg";
+            }else if($rand==2){
+                $profilePic="frontend/assets/images/profilePic.png";
+                $profileCover="frontend/assets/images/backgroundCoverPic.svg";
+            }
         }
 
         private function validateFirstName($fn){
