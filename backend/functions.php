@@ -10,4 +10,13 @@ function getInputValue($name){
     }
 }
 
+function url_for($script){
+    return WWW_ROOT.$script;
+}
+
+function redirect_to($location){
+    header("Locacion:".$location);
+}
+
+
 ?>
