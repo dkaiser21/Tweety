@@ -4,5 +4,4 @@ $sql ="SELECT * FROM crontab";
 
 $data = new Colector();
 $datos = $data->consulta($sql)
-
 ?>

@@ -4,5 +4,4 @@ $sql ="SELECT * FROM modulos";
 
 $data = new Colector();
 $datos = $data->consulta($sql)
-
 ?>
