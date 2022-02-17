@@ -2,17 +2,8 @@
 <html lang="en">
 <?php
     include_once('D:\xampp\htdocs\Modulos\View\Layout\Header.php');
+    include_once('D:\xampp\htdocs\Modulos\Controllers\Modulos_c.php');
   ?>
-  <?php
-   include_once 'D:\xampp\htdocs\Modulos\Models\Conexion.php';
-   $objeto = new Conexion();
-   $conexion = $objeto->Conectar();
-
-   $consulta = "SELECT * FROM modulos";
-   $resultado = $conexion->prepare($consulta);
-   $resultado -> execute();
-   $datos=$resultado->fetchALL(PDO::FETCH_ASSOC);
- ?>
     <title>Modulos</title>
     <style>
         table.dataTable thead {
